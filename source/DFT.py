@@ -3,7 +3,6 @@ Implementacija diskretne Fourier-ove transformacije
 '''
 
 import cmath
-import matplotlib.pyplot as plt
 
 def m_dft(x):
     '''
@@ -30,3 +29,7 @@ def m_dft(x):
 #   v1.0.1  @author Denin Mehanović
 #           @date   17.11.2024.
 #           @change Implementirana funkcija m_dft
+
+#   v1.0.2  @author Denin Mehanović
+#           @date   18.11.2024.
+#           @change Uklonjen nepotrebni import
