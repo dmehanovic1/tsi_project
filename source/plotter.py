@@ -1,3 +1,6 @@
+'''
+Modul za vizualizaciju
+'''
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -36,3 +39,7 @@ def m_plot3(t, x, X):
 #   v1.0.0  @author Denin Mehanović
 #           @date   18.11.2024.
 #           @change Inicijalna verzija
+
+#   v1.0.1  @author Denin Mehanović
+#           @date   19.11.2024.
+#           @change Dodan docstrings na nivou modula
