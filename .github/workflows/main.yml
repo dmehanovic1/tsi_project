@@ -26,7 +26,10 @@ jobs:
         pip install scipy==1.9.1
         pip install pytest
 
-    - name: Run pytest 
+    - name: Test DFT
       run: |
         pytest tests/pt_DFT.py
-        pytest tests/pt_FFT.py
+
+    - name: Test FFT
+      run: |
+        pytest tests/pt_FFT.py        
