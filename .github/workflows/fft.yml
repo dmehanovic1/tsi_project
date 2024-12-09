@@ -1,4 +1,4 @@
-name: testing
+name: testing_fft
 
 # This trigger allows the workflow to be run manually
 on:
