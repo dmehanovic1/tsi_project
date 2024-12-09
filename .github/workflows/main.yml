@@ -28,5 +28,5 @@ jobs:
 
     - name: Run pytest 
       run: |
-        pytest /home/runner/work/tsi_project/tsi_project/tests/py_FFT.py
-        pytest /home/runner/work/tsi_project/tsi_project/tests/py_DFT.py
+        pytest ./tests/py_FFT.py
+        pytest ./tests/py_DFT.py
