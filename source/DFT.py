@@ -3,19 +3,26 @@ Implementation of the Discrete Fourier Transform (DFT)
 '''
 
 import cmath
+from tsi_project.source.common import *
 
 def m_dft(x):
     '''
     Calculates the Discrete Fourier Transform (DFT) of a signal x.
-    :param x: A list or array of signal values in the time domain
-    :return: A list of complex values in the frequency domain.
+
+    Parameters:
+    x (list): A list or array of signal values in the time domain
+
+    Returns:
+    list: A list of complex values in the frequency domain.
 
     Example of function usage:
-        signal = [1, 0, -1, 0]  # Define the input signal
-        result = m_dft(signal)  # Call the function to compute the DFT
+    m_dft([1,0,-1,1])
     '''
-    
+
+    check_input(x)
+
     N = len(x)
+
     X = []
 
     for k in range(N):
@@ -42,3 +49,7 @@ def m_dft(x):
 #   v1.0.3  @author Amila Čengić
 #           @date   20.11.2024.
 #           @change Prevedeni opisi na engleski jezik i dodan primjer pozivanja
+
+#   v1.0.4  @author Amila Čengić
+#           @date   09.12.2024.
+#           @change Dorađen docstrings
