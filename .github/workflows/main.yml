@@ -37,7 +37,7 @@ jobs:
 
     - name: Run tests with coverage 1
       run: |
-        pytest --cov=tests/pt_DFT.py --cov-report=html
+        pytest --cov=source --cov-report=html
 
     - name: Upload coverage report as artifact
       uses: actions/upload-artifact@v3
