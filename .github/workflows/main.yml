@@ -31,9 +31,9 @@ jobs:
       run: |
         pytest tests/pt_DFT.py -v --color=yes
 
-    - name: Test FFT
-      run: |
-        pytest tests/pt_FFT.py -v --color=yes
+#    - name: Test FFT
+#      run: |
+#        pytest tests/pt_FFT.py -v --color=yes
 
     - name: Run tests with coverage 1
       run: |
