@@ -28,5 +28,5 @@ jobs:
 
     - name: Run pytest 
       run: |
-        pytest py_FFT.py
-        pytest py_DFT.py
+        pytest tests/py_FFT.py
+        pytest tests/py_DFT.py
