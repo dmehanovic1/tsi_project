@@ -25,11 +25,22 @@ jobs:
         pip install pandas==1.4.4
         pip install scipy==1.9.1
         pip install pytest
+        pip install pytest-cov
 
     - name: Test DFT
       run: |
-        pytest tests/pt_DFT.py
+        pytest tests/pt_DFT.py -v --color=yes
 
     - name: Test FFT
       run: |
-        pytest tests/pt_FFT.py        
+        pytest tests/pt_FFT.py -v --color=yes
+
+    - name: Run tests with coverage 1
+      run: |
+        pytest --cov=tsi_project --cov-report=html
+
+    - name: Upload coverage report as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: htmlcov/        
