@@ -1,8 +1,33 @@
 '''
-Modul za vizualizaciju
+Visualisation module
 '''
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+def m_3dplot(X):
+    '''
+    Creates 3D graph representing the results of DFT/FFT. It shows magnitude and phase as functions of frequency.
+    :param X: Frequency domain samples of signal which is result of performing DFT/FFT.
+    :return: None
+
+    Example of usage: m_3dplot([1+1j,2,1,2])
+    '''
+    N = len(X)
+    freqs = np.fft.fftfreq(N)
+    magnitude = np.abs(X)
+    phase = np.angle(X)
+
+    fig = plt.figure(figsize=(10,7))
+    ax = fig.add_subplot(111, projection='3d')
+
+    scatter = ax.scatter(freqs, magnitude, phase, c=magnitude, cmap='viridis', s=50)
+    fig.colorbar(scatter, ax=ax, label='Magnitude')
+    ax.set_xlabel('Frequency (Hz)')
+    ax.set_ylabel('Magnitude')
+    ax.set_zlabel('Phase (radians)')
+    plt.title('3D representation of DFT')
+    plt.show()
 
 def m_plot3(t, x, X):
     '''
@@ -43,3 +68,7 @@ def m_plot3(t, x, X):
 #   v1.0.1  @author Denin Mehanović
 #           @date   19.11.2024.
 #           @change Dodan docstrings na nivou modula
+
+#   v1.0.2  @author Denin Mehanović
+#           @date   24.12.2024.
+#           @change 3d plot funkcija
