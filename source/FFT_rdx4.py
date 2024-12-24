@@ -8,6 +8,28 @@ from tsi_project.source.common import *
 def _is_power_of_4(n):
     return n > 0 and (n & (n - 1)) == 0 and (n - 1) % 3 == 0
 
+def fft_base_case(x):
+    """Internal function. Base case for FFT (radix 4)"""
+    N = len(x)
+    if N == 1:
+        return x
+    if N == 2:
+        return np.array([x[0] + x[1], x[0] - x[1]])
+    if N == 3:
+        return np.array([x[0] + x[1] + x[2],
+                         x[0] + x[1] * np.exp(-2j * np.pi / 3) + x[2] * np.exp(-4j * np.pi / 3),
+                         x[0] + x[1] * np.exp(-4j * np.pi / 3) + x[2] * np.exp(-2j * np.pi / 3)])
+
+    if N == 4:
+        # Simple DFT for size 4
+        return np.array([x[0] + x[1] + x[2] + x[3],
+                         x[0] + x[1] * np.exp(-2j * np.pi / 4) + x[2] * np.exp(-4j * np.pi / 4) + x[3] * np.exp(
+                             -6j * np.pi / 4),
+                         x[0] + x[1] * np.exp(-4j * np.pi / 4) + x[2] * np.exp(-8j * np.pi / 4) + x[3] * np.exp(
+                             -12j * np.pi / 4),
+                         x[0] + x[1] * np.exp(-6j * np.pi / 4) + x[2] * np.exp(-12j * np.pi / 4) + x[3] * np.exp(
+                             -18j * np.pi / 4)])
+
 def m_fft_rdx4(x):
     '''
     Calculates the Fast Fourier Transform (FFT radix 4) of a signal x.
@@ -29,32 +51,35 @@ def m_fft_rdx4(x):
     if (not(_is_power_of_4(N))):
         raise ValueError("Error: Sequence length is not a power of 4.")
 
-    if N <= 1:
-        return x
+    if N <= 4:
+        return fft_base_case(x)
 
-    # Split the input into four parts
-    x0 = m_fft_rdx4(x[::4])  # Elements at indices 0, 4, 8, ...
-    x1 = m_fft_rdx4(x[1::4])  # Elements at indices 1, 5, 9, ...
-    x2 = m_fft_rdx4(x[2::4])  # Elements at indices 2, 6, 10, ...
-    x3 = m_fft_rdx4(x[3::4])  # Elements at indices 3, 7, 11, ...
+    # Split the input into 4 parts
+    x0 = x[0::4]  # Every 4th element starting from index 0
+    x1 = x[1::4]  # Every 4th element starting from index 1
+    x2 = x[2::4]  # Every 4th element starting from index 2
+    x3 = x[3::4]  # Every 4th element starting from index 3
 
-    # Twiddle factors for N=4
-    W = [np.exp(-2j * np.pi * k / N) for k in range(N // 4)]
+    # Recursively compute the FFT for each part
+    fft_x0 = m_fft_rdx4(x0)
+    fft_x1 = m_fft_rdx4(x1)
+    fft_x2 = m_fft_rdx4(x2)
+    fft_x3 = m_fft_rdx4(x3)
 
-    # Initialize the output array
-    result = [0] * N
+    # Combine the results
+    W4 = np.exp(-2j * np.pi / N * np.arange(N // 4))
+    result = np.zeros(N, dtype=complex)
 
-    # Combine the results from the four parts
     for k in range(N // 4):
-        w0 = W[k] * x1[k]
-        w1 = W[2 * k] * x2[k]
-        w2 = W[3 * k] * x3[k]
+        W0 = np.exp(-2j * np.pi * k / N)
+        W1 = np.exp(-2j * np.pi * 2 * k / N)
+        W2 = np.exp(-2j * np.pi * 3 * k / N)
+        W3 = np.exp(-2j * np.pi * 4 * k / N)
 
-        # Compute the FFT values for each section
-        result[k] = x0[k] + w0 + w1 + w2
-        result[k + N // 4] = x0[k] - w0 + w1 - w2
-        result[k + N // 2] = x0[k] + w0 - w1 - w2
-        result[k + 3 * N // 4] = x0[k] - w0 - w1 + w2
+        result[k] = fft_x0[k] + W0 * fft_x1[k] + W1 * fft_x2[k] + W2 * fft_x3[k]
+        result[k + N // 4] = fft_x0[k] + W1 * fft_x1[k] + W2 * fft_x2[k] + W3 * fft_x3[k]
+        result[k + N // 2] = fft_x0[k] + W2 * fft_x1[k] + W3 * fft_x2[k] + W0 * fft_x3[k]
+        result[k + 3 * N // 4] = fft_x0[k] + W3 * fft_x1[k] + W0 * fft_x2[k] + W1 * fft_x3[k]
 
     return result
 
@@ -66,3 +91,7 @@ def m_fft_rdx4(x):
 #   v1.0.1  @author Amina Omerčević
 #           @date   09.12.2024.
 #           @change Implementiran FFT_rdx4
+
+#   v1.0.2  @author Denin Mehanović
+#           @date   23.12.2024.
+#           @change Proširen base case
