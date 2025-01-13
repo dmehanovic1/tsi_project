@@ -41,7 +41,7 @@ U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za v
 *Konceptualna shema sistema je prikazana na slici 1 [^1]:*
 
 <p align="center">
-<img src="Slike/Shema_1.png"">
+<img src="Slike/scrum_shema.png"">
 <br>
 Slika 1: Konceptualna scrum shema 
 </p>
