@@ -33,18 +33,20 @@ U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za v
 • Optimizirati algoritme za bolje performanse.
 
 • Analizirati signale koristeći implementirane Fourierove transformacije
+
 ---
 ## Konceptualna scrum šema po kojoj je vođen projekat
 
 -  Scrum šema predstavlja okvir za iterativni i inkrementalni razvoj projekata, gdje tim kroz organizovane sprintove radi na postizanju jasno definisanih ciljeva. Ključni elementi uključuju backlog za upravljanje zadacima, ceremonije 
-  poput dnevnih sastanaka i retrospektiva za koordinaciju i poboljšanje, te kontinuiranu isporuku funkcionalnih inkremenata proizvoda.
-*Konceptualna shema sistema je prikazana na slici 1 [^1]:*
+  poput dnevnih sastanaka i retrospektiva za koordinaciju i poboljšanje, te kontinuiranu isporuku funkcionalnih inkremenata proizvoda. Konceptualna shema sistema je prikazana na slici 1:
 
 <p align="center">
-<img src="Slike/scrum_shema.png"">
+<img src="Slike/scrum_shema.PNG"">
 <br>
 Slika 1: Konceptualna scrum shema 
 </p>
+
+
 ---
 
 ## Koraci za implementaciju projektnog zadatka u spiralama:
