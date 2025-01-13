@@ -65,3 +65,16 @@ Slika 1: Konceptualna scrum shema
 
 - **Sprint 5 - Finalizacija projekta:**
   - Fokus ovog sprinta bio je na završnim korekcijama i optimizaciji implementiranih funkcionalnosti, uz detaljne provjere sistema i ispravke preostalih grešaka. Cilj je bio osigurati potpunu funkcionalnost i kvalitet projekta, uz finalizaciju dokumentacije za prezentaciju i isporuku.
+
+---
+## Rezultati
+ Prikaz rezultata u vremenskom i frekvencijskom domenu omogućava vizualizaciju stvarnog (realnog) i kompleksnog dijela signala, kao i analizu magnitude i faze. Rezultati pokazuju kako signali prelaze iz vremenskog u frekvencijski domen, uz jasne razlike između različitih implementacija i oblika signala.
+
+**Slika 2:**
+ - Na ovoj slici prikazan je kompleksniji signal u vremenskom i frekvencijskom domenu. Realni dio signala u vremenskom domenu (gornji lijevi grafikon) pokazuje varijacije amplitude kroz uzorke, dok je kompleksni dio (donji lijevi grafikon) približno nula. U frekvencijskom domenu (gornji srednji i donji srednji grafikon) vidljive su izražene komponente na određenim frekvencijama, dok magnitude i faze (desni grafikoni) ukazuju na raspodjelu energije signala i njegovu faznu promjenu.
+
+<p align="center">
+<img src="Slike/"">
+<br>
+Slika 1: Konceptualna scrum shema 
+</p>
