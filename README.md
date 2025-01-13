@@ -74,7 +74,7 @@ Slika 1: Konceptualna scrum shema
  - Na ovoj slici prikazan je kompleksniji signal u vremenskom i frekvencijskom domenu. Realni dio signala u vremenskom domenu (gornji lijevi grafikon) pokazuje varijacije amplitude kroz uzorke, dok je kompleksni dio (donji lijevi grafikon) približno nula. U frekvencijskom domenu (gornji srednji i donji srednji grafikon) vidljive su izražene komponente na određenim frekvencijama, dok magnitude i faze (desni grafikoni) ukazuju na raspodjelu energije signala i njegovu faznu promjenu.
 
 <p align="center">
-<img src="Slike/"">
+<img src="Slike/rezultati - 1.jpg"">
 <br>
 Slika 1: Konceptualna scrum shema 
 </p>
