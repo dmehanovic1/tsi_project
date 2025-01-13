@@ -1,5 +1,5 @@
 # Telekomunikacijski softver inženjering  - Implementacija Fourierove transformacije
-
+---
 ## Opis projekta
 
 Studenti će prvo implementirati diskretnu Fourierovu transformaciju (DFT)
@@ -40,8 +40,14 @@ U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za v
 - **Sprint 1 - Razumijevanje osnova FT:**
   - Planiranje projekta uključuje definisanje vremenskog okvira za svaku fazu, od implementacije DFT algoritma do validacije i analize performansi, kako bi se osiguralo pravovremeno izvršenje zadataka. Takođe, potrebno je odrediti uloge i odgovornosti članova tima, kao i obezbijediti resurse poput softverskih alata i literature za uspješnu realizaciju projekta.
 
-- **Sprint 2 - Epic, backlog i sprintovi:**
-  - U ovom poglavlju dnevnika rada fokus je stavljen na koncept epic-a, backlog-a i sprintova u okviru projekta implementacije Fourierove transformacije. Ovaj dokument služi kao zapis o napretku tokom razvoja projekta, pružajući jasan pregled strukture i organizacije rada. Tokom realizacije projekta primjenjujemo Scrum metodologiju kako bismo osigurali efikasan rad i ostvarenje postavljenih ciljeva. Za upravljanje projektom koristimo alat Jira, koji omogućava jednostavno praćenje zadataka, organizaciju timskog rada i nadzor napretka.
+- **Sprint 2 - Implementacija DFT - a:**
+  - Sprint "Implementacija DFT" fokusiran je na razvoj osnovnog algoritma za diskretnu Fourierovu transformaciju, bez korišćenja eksternih biblioteka. Cilj sprinta je postizanje funkcionalne implementacije koja precizno izvršava transformaciju i omogućava dalju optimizaciju kroz FFT.
 
-- **Sprint 3 - Epic, backlog i sprintovi:**
-  - U ovom poglavlju dnevnika rada fokus je stavljen na koncept epic-a, backlog-a i sprintova u okviru projekta implementacije Fourierove transformacije. Ovaj dokument služi kao zapis o napretku tokom razvoja projekta, pružajući jasan pregled strukture i organizacije rada. Tokom realizacije projekta primjenjujemo Scrum metodologiju kako bismo osigurali efikasan rad i ostvarenje postavljenih ciljeva. Za upravljanje projektom koristimo alat Jira, koji omogućava jednostavno praćenje zadataka, organizaciju timskog rada i nadzor napretka.
+- **Sprint 3 - Implementacija FFT - a:**
+  - U ovom sprintu fokus je na optimizaciji prethodno razvijenog DFT algoritma kroz implementaciju brze Fourierove transformacije (FFT). Cilj je postići značajno poboljšanje performansi uz zadržavanje tačnosti rezultata.
+
+- **Sprint 4 - Unapređenje koda:**
+  - Ovaj sprint bio je posvećen unapređenju performansi implementiranih algoritama, sa posebnim fokusom na optimizaciju FFT-a i njegovo poređenje sa osnovnom DFT implementacijom. Takođe, proširena je funkcionalnost sistema, uz dodatne aktivnosti testiranja i dopunjavanja dokumentacije.
+
+- **Sprint 5 - Finalizacija projekta:**
+  - Fokus ovog sprinta bio je na završnim korekcijama i optimizaciji implementiranih funkcionalnosti, uz detaljne provjere sistema i ispravke preostalih grešaka. Cilj je bio osigurati potpunu funkcionalnost i kvalitet projekta, uz finalizaciju dokumentacije za prezentaciju i isporuku.
