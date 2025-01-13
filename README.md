@@ -18,4 +18,10 @@ Nakon uspješne implementacije DFT-a, potrebno je optimizovati rješenje primjen
 U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za validaciju tačnosti implementiranih rješenja. Dodatno, neophodno je izvršiti poređenje performansi ručne   implementacije sa gotovim bibliotečkim rješenjima, fokusirajući se na vrijeme izvršenja i efikasnost svakog pristupa.
 
 ## Specifikacija siljeva projekta
-
+Razumjeti teorijske osnove Fourierove transformacije.
+• Naučiti kako implementirati DFT i FFT algoritme.
+• Primijeniti principe softverskog inženjeringa kao što su modularni dizajn,
+testiranje i verziona kontrola.
+• Rad sa bibliotekama za numeričke operacije u Pythonu (npr. NumPy).
+• Optimizirati algoritme za bolje performanse.
+• Analizirati signale koristeći implementirane Fourierove transformacije
