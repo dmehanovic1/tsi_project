@@ -7,6 +7,7 @@ ručno, a zatim optimiziranu verziju, brzu Fourierovu transformaciju (FFT).
 Nakon toga će koristiti postojeće Python biblioteke (kao što je NumPy) za
 validaciju svojih rješenja i poređenje performansi. Pored implementacije, studenti će koristiti softverski inženjering kako bi osigurali ispravnost i efikasnost
 svog koda. U nastavku su objašnjene faze prilikom rada na projektu.
+
 **Ručno implementiranje DFT algoritma:**
 U ovoj fazi potrebno je razviti osnovni algoritam za diskretnu Fourierovu transformaciju (DFT) bez oslanjanja na gotove biblioteke. Fokus aktivnosti je razumijevanje osnovnih operacija koje   čine algoritam, kao i matematičke osnove potrebne za njegovu realizaciju.
 
