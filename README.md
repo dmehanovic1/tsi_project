@@ -70,11 +70,24 @@ Slika 1: Konceptualna scrum shema
 ## Rezultati
  Prikaz rezultata u vremenskom i frekvencijskom domenu omogućava vizualizaciju stvarnog (realnog) i kompleksnog dijela signala, kao i analizu magnitude i faze. Rezultati pokazuju kako signali prelaze iz vremenskog u frekvencijski domen, uz jasne razlike između različitih implementacija i oblika signala.
 
+ 
+
 **Slika 2:**
  - Na ovoj slici prikazan je kompleksniji signal u vremenskom i frekvencijskom domenu. Realni dio signala u vremenskom domenu (gornji lijevi grafikon) pokazuje varijacije amplitude kroz uzorke, dok je kompleksni dio (donji lijevi grafikon) približno nula. U frekvencijskom domenu (gornji srednji i donji srednji grafikon) vidljive su izražene komponente na određenim frekvencijama, dok magnitude i faze (desni grafikoni) ukazuju na raspodjelu energije signala i njegovu faznu promjenu.
 
 <p align="center">
 <img src="Slike/rezultati - 1.jpg"">
 <br>
-Slika 1: Konceptualna scrum shema 
+Slika 2: Prikaz kompleksnijeg signala u vremenskom i frekvencijskom domenu
+</p>
+
+
+
+**Slika 3:**
+- Na drugoj slici predstavljen je jednostavniji signal u vremenskom i frekvencijskom domenu. Realni dio signala u vremenskom domenu (gornji lijevi grafikon) pokazuje linearan porast amplitude kroz uzorke, dok je kompleksni dio (donji lijevi grafikon) zanemariv. U frekvencijskom domenu (gornji srednji i donji srednji grafikon) dominantna je jedna frekvencija, što se jasno vidi na magnitude grafikonu, dok fazni grafikon prikazuje pravilno raspoređene fazne pomake.
+
+<p align="center">
+<img src="Slike/rezultati - 2.jpg"">
+<br>
+Slika 3: Prikaz jednostavnijeg signala u vremenskom i frekvencijskom domenu
 </p>
