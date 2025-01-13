@@ -1,6 +1,6 @@
 # Telekomunikacijski softver inženjering  - Implementacija Fourierove transformacije
 
-##Opis projekta
+## Opis projekta
 --
 Studenti će prvo implementirati diskretnu Fourierovu transformaciju (DFT)
 ručno, a zatim optimiziranu verziju, brzu Fourierovu transformaciju (FFT).
