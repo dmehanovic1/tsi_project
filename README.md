@@ -17,6 +17,7 @@ Nakon uspješne implementacije DFT-a, potrebno je optimizovati rješenje primjen
 **Validacija rješenja i poređenje performansi:**
 U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za validaciju tačnosti implementiranih rješenja. Dodatno, neophodno je izvršiti poređenje performansi ručne   implementacije sa gotovim bibliotečkim rješenjima, fokusirajući se na vrijeme izvršenja i efikasnost svakog pristupa.
 
+---
 ## Specifikacija ciljeva projekta
 
 •Razumjeti teorijske osnove Fourierove transformacije.
@@ -31,3 +32,16 @@ U završnoj fazi koristiće se postojeće Python biblioteke, poput NumPy-a, za v
 • Optimizirati algoritme za bolje performanse.
 
 • Analizirati signale koristeći implementirane Fourierove transformacije
+
+---
+
+## Koraci za implementaciju projektnog zadatka u spiralama:
+
+- **Sprint 1 - Razumijevanje osnova FT:**
+  - Planiranje projekta uključuje definisanje vremenskog okvira za svaku fazu, od implementacije DFT algoritma do validacije i analize performansi, kako bi se osiguralo pravovremeno izvršenje zadataka. Takođe, potrebno je odrediti uloge i odgovornosti članova tima, kao i obezbijediti resurse poput softverskih alata i literature za uspješnu realizaciju projekta.
+
+- **Sprint 2 - Epic, backlog i sprintovi:**
+  - U ovom poglavlju dnevnika rada fokus je stavljen na koncept epic-a, backlog-a i sprintova u okviru projekta implementacije Fourierove transformacije. Ovaj dokument služi kao zapis o napretku tokom razvoja projekta, pružajući jasan pregled strukture i organizacije rada. Tokom realizacije projekta primjenjujemo Scrum metodologiju kako bismo osigurali efikasan rad i ostvarenje postavljenih ciljeva. Za upravljanje projektom koristimo alat Jira, koji omogućava jednostavno praćenje zadataka, organizaciju timskog rada i nadzor napretka.
+
+- **Sprint 3 - Epic, backlog i sprintovi:**
+  - U ovom poglavlju dnevnika rada fokus je stavljen na koncept epic-a, backlog-a i sprintova u okviru projekta implementacije Fourierove transformacije. Ovaj dokument služi kao zapis o napretku tokom razvoja projekta, pružajući jasan pregled strukture i organizacije rada. Tokom realizacije projekta primjenjujemo Scrum metodologiju kako bismo osigurali efikasan rad i ostvarenje postavljenih ciljeva. Za upravljanje projektom koristimo alat Jira, koji omogućava jednostavno praćenje zadataka, organizaciju timskog rada i nadzor napretka.
