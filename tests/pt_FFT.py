@@ -185,7 +185,7 @@ def test_10b():
 
 def test_audio1():
     test_name = inspect.currentframe().f_code.co_name
-    seq = import_audio(1,1.1,"C:/Workspace/TKM/TKM1/TSI/Projekt/venv/tsi_project/media/StarWars60.wav")
+    seq = import_audio(1,1.1,"./media/StarWars60.wav")
     for r, e in zip(seq, seq):
         assert abs(r-e) < 1e-6, f"{test_name}: Expected {e}, but got {r}"
 
