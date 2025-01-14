@@ -26,6 +26,7 @@ jobs:
         pip install scipy==1.9.1
         pip install pytest
         pip install pytest-cov
+        pip install h5py
 
     - name: Test FFT
       run: |
