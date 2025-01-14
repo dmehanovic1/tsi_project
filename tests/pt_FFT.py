@@ -192,7 +192,7 @@ def test_audio1():
 def test_audio2():
     test_name = inspect.currentframe().f_code.co_name
     try:
-        seq = import_audio(1, 1.1, "C:/Workspace/TKM/TKM1/TSI/Projekt/venv/tsi_project/media/Stars60.wav")
+        seq = import_audio(1, 1.1, "./media/Stars60.wav")
     except Exception as e:
         if e == ValueError("Problem encountered while loading the audio file..."):
             assert ValueError("Problem encountered while loading the audio file...")
