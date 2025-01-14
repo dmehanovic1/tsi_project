@@ -7,7 +7,7 @@ import numpy as np
 import inspect
 from tsi_project.source.FFT_rdx2 import *
 from tsi_project.source.FFT_rdx4 import *
-
+from tsi_project.source.common import *
 
 def test_1a():
     test_name = inspect.currentframe().f_code.co_name
@@ -182,6 +182,20 @@ def test_10b():
 
     for r, e in zip(result, expected):
         assert abs(r-e) < 1e-6, f"{test_name}: Expected {e}, but got {r}"
+
+def test_audio1():
+    test_name = inspect.currentframe().f_code.co_name
+    seq = import_audio(1,1.1,"C:/Workspace/TKM/TKM1/TSI/Projekt/venv/tsi_project/media/StarWars60.wav")
+    for r, e in zip(seq, seq):
+        assert abs(r-e) < 1e-6, f"{test_name}: Expected {e}, but got {r}"
+
+def test_audio2():
+    test_name = inspect.currentframe().f_code.co_name
+    try:
+        seq = import_audio(1, 1.1, "C:/Workspace/TKM/TKM1/TSI/Projekt/venv/tsi_project/media/Stars60.wav")
+    except Exception as e:
+        if e == ValueError("Problem encountered while loading the audio file..."):
+            assert ValueError("Problem encountered while loading the audio file...")
 
 #   v1.0.0  @author Amina Omerčević
 #           @date   09.12.2024.

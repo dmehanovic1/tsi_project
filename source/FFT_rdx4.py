@@ -6,10 +6,15 @@ import numpy as np
 from tsi_project.source.common import *
 
 def _is_power_of_4(n):
+    '''
+    Internal function that checks if the input number is the power of 4.
+    '''
     return n > 0 and (n & (n - 1)) == 0 and (n - 1) % 3 == 0
 
 def fft_base_case(x):
-    """Internal function. Base case for FFT (radix 4)"""
+    '''
+    Internal function that returns base case for FFT radix 4.
+    '''
     N = len(x)
     if N == 1:
         return x
@@ -40,8 +45,8 @@ def m_fft_rdx4(x):
     Returns:
     list: A list of complex values in the frequency domain.
 
-    Example of function usage:
-    m_fft_rdx4([1,0,-1,1])
+    Example:
+    >>> m_fft_rdx4([1,0,-1,1])
     '''
 
     check_input(x)

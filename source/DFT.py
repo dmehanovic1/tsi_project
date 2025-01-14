@@ -15,8 +15,8 @@ def m_dft(x):
     Returns:
     list: A list of complex values in the frequency domain.
 
-    Example of function usage:
-    m_dft([1,0,-1,1])
+    Example:
+    >>> m_dft([1,0,-1,1])
     '''
 
     check_input(x)

@@ -6,6 +6,9 @@ import numpy as np
 from tsi_project.source.common import *
 
 def _is_power_of_2(n):
+    '''
+    Internal function that checks if the input number is the power of 2.
+    '''
     return n > 0 and (n & (n - 1)) == 0
 
 def m_fft_rdx2(x):
@@ -18,8 +21,8 @@ def m_fft_rdx2(x):
     Returns:
     list: A list of complex values in the frequency domain.
 
-    Example of function usage:
-    m_fft_rdx2([1,0,-1,1])
+    Example:
+    >>> m_fft_rdx2([1,0,-1,1])
     '''
 
     check_input(x)
